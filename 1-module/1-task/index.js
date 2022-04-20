@@ -6,6 +6,7 @@ function factorial(n) {
   //   console.log(res);
   
    }
+   return res;
 
 }
 factorial(0);
