@@ -1,6 +1,7 @@
 function factorial(n) {
+  let res = 1;
 
-  for (let res = 1; n > 1; n--) {
+  for (let i = 1; i <=n; n++) {
    
     res *= n;
   //   console.log(res);
