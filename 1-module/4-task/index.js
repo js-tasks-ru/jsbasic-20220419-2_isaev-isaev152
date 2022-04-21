@@ -4,7 +4,7 @@ function checkSpam(str) {
   
 
   if (str.includes('XXX') || str.includes('1XBET') === true) {
-    console.log(str);
+    
 
     return true;
  

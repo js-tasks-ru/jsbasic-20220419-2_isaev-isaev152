@@ -4,7 +4,7 @@ function factorial(n) {
   for (let i = 1; i <=n; n++) {
    
     res *= n;
-  //   console.log(res);
+ 
   
    }
    return res;
