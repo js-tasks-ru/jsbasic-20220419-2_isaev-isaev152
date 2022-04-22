@@ -26,7 +26,6 @@ function print(text) {
   
   return true;
 
- 
 }
 
 function sayHello() {
