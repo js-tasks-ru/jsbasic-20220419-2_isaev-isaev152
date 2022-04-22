@@ -10,4 +10,6 @@ function checkSpam(str) {
  
   }return false;
 }
-checkSpam(str);
+checkSpam('1XbeT now');
+checkSpam('free xxxxx');
+checkSpam('innocent rabbit');

@@ -28,6 +28,7 @@ function print(text) {
 
 }
 
+
 function sayHello() {
   let userName = prompt('Введите ваше имя');
 
