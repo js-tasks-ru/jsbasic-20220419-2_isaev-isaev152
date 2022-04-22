@@ -5,22 +5,17 @@ function print(text) {
 
 
  function isValid(name) {
-
- if (name === null || name === undefined) {
- 
-     return false;
- }else if(name.includes(" ")) {
-   
+  if (name == null) {
+      return false;
+  } else if(name.includes(" ")) {
       return false;    
   } else if(name.length > 4) {
-    
       return false;
   } else if(name == "") {
       return false;
   }
   
   return true;
-
 }
 
 
