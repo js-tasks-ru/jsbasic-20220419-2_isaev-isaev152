@@ -1,5 +1,5 @@
 function checkSpam(str) {
-  // ваш код...
+
    str = str.toUpperCase();
   
 
