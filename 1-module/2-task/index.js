@@ -6,7 +6,7 @@ function print(text) {
 
  function isValid(name) {
 
- if (name === null || undefined) {
+ if (name === null || name === undefined) {
  
      return false;
  }else if(name.includes(" ")) {
