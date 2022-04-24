@@ -9,7 +9,7 @@ function print(text) {
       return false;
   } else if(name.includes(" ")) {
       return false;    
-  } else if(name.length > 4) {
+  } else if(name.length < 4) {
       return false;
   } else if(name == "") {
       return false;
