@@ -1,14 +1,9 @@
 function factorial(n) {
   let res = 1;
-
-  for (let i = 1; i <= n; n++) {
-   
+  for (let i = 1; i <= n; n++) {  
     res *= n;
- 
-  
    }
    return res;
-
 }
 factorial(0);
 factorial(1);
