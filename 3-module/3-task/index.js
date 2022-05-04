@@ -7,6 +7,5 @@ function camelize(str) {
     wordArr[i] = charArr.join('');
   }
   myStr = wordArr.join('');
-  console.log(myStr);
   return myStr;
 }
