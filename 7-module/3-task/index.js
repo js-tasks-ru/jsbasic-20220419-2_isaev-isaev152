@@ -75,6 +75,56 @@ export default class StepSlider {
       progress.style.width = `${valuePercents}%`;
     });
   };
+  dragndrop() {
+    // let progress = this.elem.querySelector('.slider__progress');
+    // let thumb = this.elem.querySelector('.slider__thumb');
+
+    thumb.ondragstart = (event) => {
+      event.preventDefault()
+    };
+
+    thumb.addEventListener('pointerdown', ()=>{
+      
+      const onMove = (event) => {
+        this.elem.classList.add('slider_dragging');
+        let left = event.clientX - this.elem.getBoundingClientRect().left;
+      
+      let leftRelative = left / this.elem.offsetWidth;
+      if (leftRelative < 0) {
+        leftRelative = 0;
+      }
+      
+      if (leftRelative > 1) {
+        leftRelative = 1;
+      }
+      let leftPercents = leftRelative * 100;
+      let segments = this.steps - 1;
+      let roughValue = leftRelative * segments;
+      this.value = Math.round(roughValue);
+      
+      let sliderValue = this.elem.querySelector('.slider__value');
+      sliderValue.innerHTML = this.value;
+     
+      let thumb = this.elem.querySelector('.slider__thumb');
+      let progress = this.elem.querySelector('.slider__progress');
+      thumb.style.left = `${leftPercents}%`;
+      progress.style.width = `${leftPercents}%`;
+      };
+    
+
+    document.addEventListener('pointermove', onMove);
+
+    document.addEventListener('pointerup', ()=>{
+      const customEvent = new CustomEvent('slider-change', { 
+        detail: this.value, 
+        bubbles: true 
+      })
+      this.elem.dispatchEvent(customEvent);
+
+      document.removeEventListener('pointermove', onMove);
+    }, {once: true});
+  })   
+  };
 
 
   }
