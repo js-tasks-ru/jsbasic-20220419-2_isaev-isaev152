@@ -44,11 +44,11 @@ export default class Cart {
       }
     }
     this.onProductUpdate(cartItem);
-  }
+  };
 
   isEmpty() {
     return this.cartItems.length == 0 ? true : false;
-  }
+  };
 
   getTotalCount() {
     let totalCount = 0;

@@ -7,7 +7,7 @@ export default class Modal {
   open() {
     
     const createModal = `<div class="modal">
-    <!--Прозрачная подложка перекрывающая интерфейс-->
+  
     <div class="modal__overlay"></div>
 
     <div class="modal__inner">
@@ -18,12 +18,12 @@ export default class Modal {
         </button>
 
         <h3 class="modal__title">
-          Вот сюда нужно добавлять заголовок
+     
         </h3>
       </div>
 
       <div class="modal__body">
-        A сюда нужно добавлять содержимое тела модального окна
+  
       </div>
     </div>
   </div>`;
