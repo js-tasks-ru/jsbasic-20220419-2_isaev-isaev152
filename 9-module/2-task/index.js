@@ -13,6 +13,24 @@ import Cart from '../../8-module/4-task/index.js';
 export default class Main {
 
   constructor() {
+    // this.dataCarouselHolder = document.querySelector('[data-carousel-holder]');
+    // this.dataSliderHolder = document.querySelector('[data-slider-holder]');
+    // this.dataRibbonHolder = document.querySelector('[data-ribbon-holder]');
+    // this.dataCartIconHolder = document.querySelector('[data-cart-icon-holder]');
+    // this.dataProductsGridHolder = document.querySelector('[data-products-grid-holder]');
+
+    // this.carousel = new Carousel(slides);
+    // this.ribbonMenu = new RibbonMenu(categories);
+    // this.stepSlider = new StepSlider({
+    //   steps: 5,
+    //   value: 3
+    // });
+    // this.cartIcon = new CartIcon();
+    // this.card = new Cart(this.cartIcon);
+  }
+
+  async render() {
+
     this.dataCarouselHolder = document.querySelector('[data-carousel-holder]');
     this.dataSliderHolder = document.querySelector('[data-slider-holder]');
     this.dataRibbonHolder = document.querySelector('[data-ribbon-holder]');
@@ -27,9 +45,9 @@ export default class Main {
     });
     this.cartIcon = new CartIcon();
     this.card = new Cart(this.cartIcon);
-  }
 
-  async render() {
+
+
     this.dataCarouselHolder.append(this.carousel.elem);
     this.dataRibbonHolder.append(this.ribbonMenu.elem);
     this.dataSliderHolder.append(this.stepSlider.elem);
