@@ -13,6 +13,7 @@ import Cart from '../../8-module/4-task/index.js';
 export default class Main {
 
   constructor() {
+
     this.dataCarouselHolder = document.querySelector('[data-carousel-holder]');
     this.dataSliderHolder = document.querySelector('[data-slider-holder]');
     this.dataRibbonHolder = document.querySelector('[data-ribbon-holder]');
@@ -79,5 +80,8 @@ export default class Main {
         vegeterianOnly: event.target.checked
       });
     };
+
   }  
 }
+
+
