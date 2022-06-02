@@ -79,6 +79,5 @@ export default class Main {
         vegeterianOnly: event.target.checked
       });
     };
-  }
-  
+  }  
 }
